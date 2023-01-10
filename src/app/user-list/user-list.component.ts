@@ -13,10 +13,10 @@ export class UserListComponent {
 
   }
   ngOnInit() {
-    this.getCustomerList();
+    this.getUserList();
   }
 
-  getCustomerList(){
+  getUserList(){
     this.http.get('http://localhost:8090/users').subscribe((responce:any) =>{
       this.userList = responce;
     })
